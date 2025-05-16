@@ -19,7 +19,7 @@ def index():
     bandwidth = get_user_bandwidth()
     video_path = get_video_path(bandwidth)
     print(f"[INFO] Banda do usuário: {bandwidth:.2f} Mbps | Qualidade simulada: {bandwidth} | Video = {video_path}")
-    return render_template('index.html', video_file=video_path)
+    return render_template('index1.html', video_file=video_path)
 
 @app.route('/stream')
 def stream_video():

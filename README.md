@@ -1,5 +1,8 @@
 # sistemas_distribuidos
-Sistemas Distribuídos
+## Aulas Práticas de Sistemas Distribuídos - UFVJM
+### Prof. Alessandro Vivas Andrade
+
+
 ## Clonar repositório
 git clone https://github.com/avivasa/sistemas_distribuidos.git
 

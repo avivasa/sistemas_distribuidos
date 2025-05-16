@@ -12,7 +12,7 @@ def get_video_path(bandwidth):
 
 @app.route('/')
 def index():
-    return render_template('index1.html')
+    return render_template('index2.html')
 
 @app.route('/stream')
 def stream_video():

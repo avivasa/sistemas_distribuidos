@@ -39,7 +39,7 @@ def index():
         video_path = get_video_path(bandwidth)
         quality = video_path.split('_')[-1].replace('.mp4', '')
         return render_template('video.html', video_path='/' + video_path, bandwidth=bandwidth, quality=quality)
-    return render_template('index2.html')
+    return render_template('index3.html')
 
 @app.route('/video/<quality>')
 def stream_video(quality):

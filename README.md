@@ -1,2 +1,2 @@
-# sitemas_distribuidos
+# sistemas_distribuidos
 Sistemas Distribuídos

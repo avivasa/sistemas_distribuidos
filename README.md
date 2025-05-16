@@ -6,7 +6,16 @@
 ## Clonar repositório
 git clone https://github.com/avivasa/sistemas_distribuidos.git
 
-## Aula Multimídia
+## Aula Django 01 - Cliente Servidor
+
+## Aula Django 02 - Herança de Templates 
+
+## Aula Django 03 - Modelos 
+
+
+
+
+## Aula Multimídia -> multimidia
 ### app 1
 Passo 1: Crie o Ambiente Virtual
 ```bash

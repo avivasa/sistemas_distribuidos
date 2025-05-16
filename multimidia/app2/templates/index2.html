@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Netflix</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Mini Netflix</title>
+</head>
+<body>
+    <h1>Bem-vindo ao Mini Netflix Simulado</h1>
+    <p>Calculando sua largura de banda...</p>
+
+    <script>
+        async function medirLarguraDeBanda() {
+            const arquivoTeste = "/static/test-file.jpg"; // ~100KB
+            const inicio = performance.now();
+
+            try {
+                const response = await fetch(arquivoTeste + '?cache=' + Math.random());
+                const blob = await response.blob();
+                const fim = performance.now();
+                const duracaoSegundos = (fim - inicio) / 1000;
+                const tamanhoBits = blob.size * 8;
+                const larguraDeBandaMbps = (tamanhoBits / duracaoSegundos) / (1024 * 1024);
+
+                console.log("Largura de banda estimada:", larguraDeBandaMbps.toFixed(2), "Mbps");
+
+                // Redireciona para o /stream com a largura de banda como parâmetro
+                window.location.href = `/stream?bandwidth=${larguraDeBandaMbps.toFixed(2)}`;
+            } catch (error) {
+                console.error("Erro ao medir largura de banda:", error);
+                // Fallback para largura padrão
+                window.location.href = `/stream?bandwidth=3.0`;
+            }
+        }
+
+        medirLarguraDeBanda();
+</script>
+    <h1>Bem-vindo ao Mini Netflix Simulado</h1>
+    <p>O sistema simula qualidade de vídeo com base na largura de banda.</p>
+    <video width="640" height="360" controls>
+        <source src="{{ url_for('stream_video') }}" type="video/mp4">
+        Seu navegador não suporta vídeo.
+    </video>
+</body>
+</html>
 

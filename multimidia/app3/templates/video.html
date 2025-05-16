@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vídeo com Qualidade Adaptativa</title>
+</head>
+<body>
+    <h2>Largura de banda estimada: {{ "%.2f"|format(bandwidth) }} Mbps</h2>
+    <h3>Qualidade do vídeo selecionada: {{ quality }}</h3>
+    <video width="640" height="360" controls>
+        <source src="{{ video_path }}" type="video/mp4">
+        Seu navegador não suporta vídeo.
+    </video>
+</body>
+</html>
